@@ -8,7 +8,7 @@ POST请求头中ContentType = application/json;
 ####请求方式：Post
 ####请求参数：
 <table>
-   <tr>
+      <tr>
       <td>字段名</td>
       <td>字段类型</td>
       <td>说明</td>
@@ -20,8 +20,9 @@ POST请求头中ContentType = application/json;
       <td>String</td>
       <td>小区名(必须提供)</td>
       <td>是</td>
-      <td rowspan="13">432432</td>
+      <td rowspan = "12"></td>
    </tr>
+   <tr>
       <td>address</td>
       <td>String</td>
       <td>地址</td>
@@ -63,5 +64,40 @@ POST请求头中ContentType = application/json;
       <td>市</td>
       <td>是</td>
    </tr>
-
+   <tr>
+      <td>district</td>
+      <td>String</td>
+      <td>区</td>
+      <td>是</td>
+   </tr>
+   <tr>
+      <td>floorNo</td>
+      <td>Integer</td>
+      <td>所在楼层（缺省0）</td>
+      <td>是</td>
+   </tr>
+   <tr>
+      <td>floorSum</td>
+      <td>Integer</td>
+      <td>总楼层（缺省0）</td>
+      <td>是</td>
+   </tr>
+   <tr>
+      <td>remark</td>
+      <td>String</td>
+      <td>备注（可传空）</td>
+      <td>否</td>
+   </tr>
+   <tr>
+      <td>urlId</td>
+      <td>String</td>
+      <td>附件的GUID，逗号分隔（单独文档说明）</td>
+      <td>是</td>
+   </tr>
+   <tr>
+      <td>assessPrice</td>
+      <td>Double</td>
+      <td>自估价</td>
+      <td>是</td>
+   </tr>
 </table>
