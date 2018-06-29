@@ -110,3 +110,51 @@ custInfoModels 借款/权利人信息    |name    |Sring   |是   |客户名称
 custInfoModels 借款/权利人信息    |sid |Sring   |是   |证件号码
 custInfoModels 借款/权利人信息    |telephone   |String   |是   |电话
 custInfoModels 借款/权利人信息    |xiaohai |String   |是   |有未成人数（年龄小于18岁）（必须提供）
+houseModels房屋信息|address       |String   |见图  |房产地址
+houseModels房屋信息|areaRemark    |String   |见图  |面积备注（可传空）
+houseModels房屋信息|city          |String   |见图  |房产所在城市
+houseModels房屋信息|diYa          |String   |见图  |是否有民间抵押
+houseModels房屋信息|district      |String   |见图  |房产地区
+houseModels房屋信息|doneTime      |Sring   |见图  |竣工年限
+houseModels房屋信息|estatesNo     |String   |见图  |产证编号
+houseModels房屋信息|floorNo       |Integer |见图  |所在楼层（缺省0）
+houseModels房屋信息|floorSum      |Integer |见图  |总楼层（缺省0）
+houseModels房屋信息|houseArea     |Double  |见图  |房产面积
+houseModels房屋信息|houseNature   |String   |见图  |房产性质(多层公寓、高层公寓、花园住宅、其它、工业厂房、商铺、办公楼)
+houseModels房屋信息|isFuGai       |Integer |见图  |民间是否为最高额抵押(0：否、1：是)
+houseModels房屋信息|isSeeHouse    |Integer |见图  |能否看房(0：否、1：是，2：未知)
+houseModels房屋信息|isZuiGaoEDiYa |Integer |见图  |银行是否为最高额抵押(0：否、1：是)
+houseModels房屋信息|juZhu         |String   |见图  |居住情况(自住、租赁有备案、租赁无备案、空置、拆迁安置)
+houseModels房屋信息|laoRen        |Integer |见图  |有无老年人和未成年 (0：否、1：是)
+houseModels房屋信息|minJian       |String   |见图  |民间抵押余额（缺省0）
+houseModels房屋信息|minJianDaoQiRi|String   |见图  |民间到期日
+houseModels房屋信息|minJianZiFang |String   |见图  |民间出资方
+houseModels房屋信息|owner1        |String   |见图  |房产权利人
+houseModels房屋信息|personNo      |Integer |见图  |户口人数（必须提供）
+houseModels房屋信息|province      |String   |见图  |房产所在省
+houseModels房屋信息|qiTa          |String   |见图  |此前借款用途
+houseModels房屋信息|regionName    |String   |见图  |小区名称(必须提供)
+houseModels房屋信息|remark        |String   |见图  |备注
+houseModels房屋信息|shuXing       |Integer |是    |房屋属性(1抵押房、2备用房)
+houseModels房屋信息|urlId         |String   |见图  |附件的GUID，逗号分隔
+houseModels房屋信息|useTime       |String   |见图  |使用年限（缺省0）
+houseModels房屋信息|yinHang       |String   |见图  |抵押银行名称
+houseModels房屋信息|yinHangBalance|String   |见图  |银行抵押余额
+houseModels房屋信息|yinHangDaiKuan|String   |见图  |银行贷款性质(按揭、持证抵押)
+houseModels房屋信息|yinHangDiYa   |String   |见图  |是否有银行抵押
+houseModels房屋信息|yinHangRiQi   |String   |见图  |银行到期日
+houseModels房屋信息|DqbHouseDiya  |houseDiyaList  |  |抵押信息(houseDiya对象)
+houseModels房屋信息|yinHangXingZhi|String   |见图  |银行性质(中资、外资)
+deptModel资方信息|deptId  |Long    |是  ||
+deptModel资方信息|userId  |Long    |是  ||
+|borrowingBalance  |Integer |是   |借款金额（万元）
+|borrowingLife     |Integer |是   |借款期限（月）
+|borrowingUsage    |Integer |是   |借款用途
+|capitalName       |String   |是   |资金方名称
+|monthRate         |String   |是   |月利率
+|borrowingLaoren   |String  |是   |老人数
+|borrowingXiaohai  |String  |是   |小孩数
+|payment           |String   |是   |还款来源
+|orderNo     |String   |是   |订单编号
+|orderState  |String   |是   |订单状态
+
