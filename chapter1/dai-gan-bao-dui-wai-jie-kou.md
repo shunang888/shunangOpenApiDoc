@@ -20,7 +20,7 @@ POST请求头中ContentType = application/json;
       <td>String</td>
       <td>小区名(必须提供)</td>
       <td>是</td>
-      <td rowspan = "14"></td>
+   <td rowspan="14"></td>
    </tr>
    <tr>
       <td>address</td>
