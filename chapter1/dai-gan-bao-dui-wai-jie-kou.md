@@ -23,5 +23,5 @@ district   |String | 区                 |是
 floorNo    |Integer| 所在楼层（缺省0）   |是
 floorSum   |Integer| 总楼层（缺省0）     |是
 remark     |String | 备注（可传空）      |否
-urlId      |String | 附件的GUID，逗号分隔（单独文档说明）    |是
+urlId      |String | 附件的GUID，逗号分隔（单独文档说明）                                  |是
 assessPrice|Double | 自估价             |是
