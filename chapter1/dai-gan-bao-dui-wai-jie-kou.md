@@ -8,7 +8,7 @@ POST请求头中ContentType = application/json;
 ####请求方式：Post
 ####请求参数：
 <table>
-      <tr>
+   <tr>
       <td>字段名</td>
       <td>字段类型</td>
       <td>说明</td>
@@ -20,7 +20,7 @@ POST请求头中ContentType = application/json;
       <td>String</td>
       <td>小区名(必须提供)</td>
       <td>是</td>
-      <td rowspan = "12"></td>
+      <td rowspan = "14"></td>
    </tr>
    <tr>
       <td>address</td>
