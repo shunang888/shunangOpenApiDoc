@@ -157,4 +157,108 @@ deptModel资方信息|userId  |Long    |是  ||
 |payment           |String   |是   |还款来源
 |orderNo     |String   |是   |订单编号
 |orderState  |String   |是   |订单状态
+|fk_house_id |Integer |是   |关联订单dqb_house表主键
+|dycs        |Sring   |是   |抵押次数
+|dyqr        |Sring   |是   |抵押权人
+|dyje        |double  |是   |抵押全额
+|dyye        |double  |是   |抵押余额
+|zgedy       |Sring   |是   |最高额抵押
+|dyxz        |Sring   |是   |抵押性质
+|dkxz        |Sring   |是   |贷款性质
+|kssj        |Time    |是   |开始时间
+|jssj        |Time    |是   |结束时间
+|ziLiaoGuid  |String  |是   |资包id
 
+#####特别说明：
+
+(1)
+houseModels中，如果是抵押房（shuXing=1），则以下字段的值将被忽略：
+houseNature(房屋性质)、estatesNo(产证编号)、houseArea(面积)、
+regionName(小区名)、floorNo(所在楼层)、floorSum(总楼层)
+province(省)、city(市)、district(区)、address(地址)
+抵押房各个字段如下图所示：
+![](/assets/图片1.png)
+若“是否抵押”=“否”，则抵押信息不必填写，否则必须填写
+
+(2)
+备用房字段可以简化（*必填，其他选填），如下图所示：
+![](/assets/图片2.png)
+
+(3)
+deptModel资方信息是一对枚举值，调用双方必须实时更新值库。
+
+(4)
+orderState有以下两种可能的取值：
+house_confirm:房屋评估待确认==需要确认后才能详细进件
+house_confirmed:房屋评估已确认
+riskmanage_return_modify:风控退回（修改）	
+一般情况下默认为house_confirmed，如果这个单子收到过“风控退回（修改）”的消息通知（后文有详细说明），则应该传入riskmanage_return_modify。
+riskmanage_evaluation 风控中 可以补充材料
+
+####返回参数：
+字段名 |字段类型    |说明     |样例
+    :- | :-: | :-
+code  |String      |状态  ||
+msg   |String      |返回信息 ||   
+
+#####完整样例
+{
+"msg": "token不能为空",
+"code": 500
+}
+
+#4.估价复议
+
+#####Url：/api/outChannel/priceReconsider?token=xxxxxxxxxxxxxx
+#####请求方式：post
+
+####请求参数：
+|字段名       |字段类型      |是否必填    |说明  |样例
+                :- | :-: | :-
+|orderNo      |String   |是   |订单编号    |A20171215175337324
+|estatesNo    |String   |是   |房产编号    |沪房地2字2001第0123123号
+|caseBack     |String   |是   |理由       |价格偏高，价格偏低，其他
+|message      |String   |是   |具体原因    
+|attachmentId |String   |是   |附件的GUID，逗号分隔（单独文档说明）    |5fd614fc-141a-4003-927a-205de047246e,b2873343-9278-4228-91c6-4485c273c4d4
+|orderState   |String   |是   |订单状态    |house_fuyi
+
+#####完整样例
+{
+“orderState”:house_fuyi,
+"fuYiModels": [{
+"caseBack": "价格偏高",
+"estatesNo": “...”,
+"message": "文本框中的内容",
+"urlId": "5fd614fc-141a-4003-927a-205de047246e,b2873343-9278-4228-91c6-4485c273c4d4"
+},{},...
+],
+"orderNo": 90
+}
+
+####返回参数：
+|字段名	|字段类型  |说明	   |样例
+:- | :-: | :-
+|code	|String	  |状态	||
+|msg	|String	  |返回信息||	
+
+#####完整样例
+{  "msg": "",
+"code": 200
+}
+
+#5.认可评估价格
+
+#####Url： /api/outChannel/queRenJiaGe?token=xxxxxxxxxxxxxx
+#####请求方式：post
+
+####请求参数：
+|字段名	|字段类型	|是否必填	|说明	|样例
+:- | :-: | :-
+|orderNo	|String	|是	|订单编号	|A20171215180558785
+
+#####完整样例
+{
+orderModel:{
+orderNo:”A20171215180”
+  }
+}
