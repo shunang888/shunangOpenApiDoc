@@ -6,7 +6,7 @@ POST请求头中ContentType = application/json;
 # 1.下单提交
 #####Url：/api/outChannel/houseCommit?#####token=xxxxxxxxxxxxxx
 #####请求方式：Post
-#####请求参数：
+####请求参数：
 
 
 字段名 |字段类型   | 说明 | 是否必填
@@ -50,9 +50,63 @@ assessPrice|Double | 自估价             |是
 ...
   ]}
   
+####返回参数：
 字段名  |字段类型    |说明
 :- | :-: | :-
 code    |String     |状态
 msg     |String     |返回信息
 orderNo |String     |订单编号
 
+#2.查看估价结果
+#####Url：/api/outChannel/getPriceByOrderNo?#####token=xxxxxxxxxxxxxx
+#####请求方式：get
+####请求参数：
+字段名 |字段类型    |说明  |是否必填    |样例  |完整样例
+:- | :-: | :- | :-
+orderNo |String  |订单编号    |是   |A20171215180558785  |{orderNo:”...”}
+
+####返回参数：
+字段名     |字段类型|说明
+:- | :-: | :- | :-
+estatesNo |String  |产证编号
+message   |String  |退回信息
+price     |String  |房屋估价
+code      |String  |状态
+msg       |String  |返回信息
+orderState|String  |订单状态。取固定值：house_confirm
+
+#####完整样例
+{
+"code": 0,
+“msg”:”...”,
+“data”:{
+"resultModels": 
+   {
+“message”:””,
+"price": 333,
+"estatesNo": "沪123",
+“orderState”: ”house_confirm”
+       }
+
+   }
+}
+
+#3.详细情况进件
+
+#####url：/api/outChannel/intoPieces?token=xxxxxxxxxxxxxx
+#####请求方式：post
+####请求参数：
+对象|字段名 |类型  |是否必填    |样例
+    :- | :-: | :-
+companyInfoModels 借款/权利企业信息    |businessNumber  |Sring    |是   |营业执照编号
+companyInfoModels 借款/权利企业信息    |companyName     |Sring    |是   |企业名
+companyInfoModels 借款/权利企业信息    |companyType     |Integer  |是   |企业类型类型 1 借款企业2权利企业（即房屋所有人）
+custInfoModels 借款/权利人信息|custType    |Integer |是   |客户类型 1 借款人2 权利人（即房屋所有人）
+custInfoModels 借款/权利人信息    |hunyinStatus    |Integer |是   |婚姻状态(1:未婚、2：已婚、3：离异、4：丧偶、5：两          次以上婚史)
+custInfoModels 借款/权利人信息    |idType  |Integer |是   |证件类型
+custInfoModels 借款/权利人信息    |job |Sring   |是   |职业
+custInfoModels 借款/权利人信息    |laoren  |Integer |是   |有老人数（必须提供）
+custInfoModels 借款/权利人信息    |name    |Sring   |是   |客户名称
+custInfoModels 借款/权利人信息    |sid |Sring   |是   |证件号码
+custInfoModels 借款/权利人信息    |telephone   |String   |是   |电话
+custInfoModels 借款/权利人信息    |xiaohai |String   |是   |有未成人数（年龄小于18岁）（必须提供）
