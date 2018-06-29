@@ -7,3 +7,61 @@ POST请求头中ContentType = application/json;
 ####Url：/api/outChannel/houseCommit?####token=xxxxxxxxxxxxxx
 ####请求方式：Post
 ####请求参数：
+<table>
+   <tr>
+      <td>字段名</td>
+      <td>字段类型</td>
+      <td>说明</td>
+      <td>是否必填</td>
+      <td>完整样例</td>
+   </tr>
+   <tr>
+      <td>regionName</td>
+      <td>String</td>
+      <td>小区名(必须提供)</td>
+      <td>是</td>
+      <td rowspan="13">432432</td>
+   </tr>
+      <td>address</td>
+      <td>String</td>
+      <td>地址</td>
+      <td>是</td>
+   </tr>
+   <tr>
+      <td>houseNature</td>
+      <td>String</td>
+      <td>房屋性质</td>
+      <td>是</td>
+   </tr>
+   <tr>
+      <td>estatesNo</td>
+      <td>String</td>
+      <td>产证编号</td>
+      <td>是</td>
+   </tr>
+   <tr>
+      <td>houseArea</td>
+      <td>Double</td>
+      <td>面积</td>
+      <td>是</td>
+   </tr>
+   <tr>
+      <td>areaRemark</td>
+      <td>String</td>
+      <td>面积备注（可传空）</td>
+      <td>否</td>
+   </tr>
+   <tr>
+      <td>province</td>
+      <td>String</td>
+      <td>省</td>
+      <td>是</td>
+   </tr>
+   <tr>
+      <td>city</td>
+      <td>String</td>
+      <td>市</td>
+      <td>是</td>
+   </tr>
+
+</table>
