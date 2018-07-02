@@ -138,16 +138,16 @@ H|province      |String   |见图  |房产所在省
 H|qiTa          |String   |见图  |此前借款用途
 H|regionName    |String   |见图  |小区名称(必须提供)
 H|remark        |String   |见图  |备注
-||shuXing       |Integer  |是    |房屋属性(1抵押房、2备用房)
-||urlId         |String   |见图  |附件的GUID，逗号分隔
-||useTime       |String   |见图  |使用年限（缺省0）
-||yinHang       |String   |见图  |抵押银行名称
-||yinHangBalance|String   |见图  |银行抵押余额
-||yinHangDaiKuan|String   |见图  |银行贷款性质(按揭、持证抵押)
-||yinHangDiYa   |String   |见图  |是否有银行抵押
-||yinHangRiQi   |String   |见图  |银行到期日
-||DqbHouseDiya  |houseDiyaList | |抵押信息(houseDiya对象)
-||yinHangXingZhi|String   |见图  |银行性质(中资、外资)
+H|shuXing       |Integer  |是    |房屋属性(1抵押房、2备用房)
+H|urlId         |String   |见图  |附件的GUID，逗号分隔
+H|useTime       |String   |见图  |使用年限（缺省0）
+H|yinHang       |String   |见图  |抵押银行名称
+H|yinHangBalance|String   |见图  |银行抵押余额
+H|yinHangDaiKuan|String   |见图  |银行贷款性质(按揭、持证抵押)
+H|yinHangDiYa   |String   |见图  |是否有银行抵押
+H|yinHangRiQi   |String   |见图  |银行到期日
+H|DqbHouseDiya  |houseDiyaList | |抵押信息(houseDiya对象)
+H|yinHangXingZhi|String   |见图  |银行性质(中资、外资)
 deptModel资方信息|deptId          |Long     |是    ||
 deptModel资方信息|userId          |Long     |是    ||
 loanInfoModel 借款信息|borrowingBalance  |Integer |是   |借款金额（万元）
