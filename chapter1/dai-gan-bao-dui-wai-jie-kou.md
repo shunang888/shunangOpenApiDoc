@@ -359,19 +359,21 @@ code	|String	    |状态       ||
 msg	|String	    |返回信息   ||
 
 #####完整样例	
-{  "msg": "",
+{ 
+ "msg": "",
 "code": 200
 }
 
 #9.系统登录
-#####URL:/api/interfaceLogin
-#####请求方式:post
+
+URL:/api/interfaceLogin
+请求方式:post
 
 ####请求参数：
-字段名	|字段类型    |是否必填	|说明	  |完整样例
+字段名	|字段类型    |是否必填	 |说明	    |完整样例
 :- | :-: | :-
-username|String	       |是	 |用户名称  ||
-password|String	       |是	 |密码	    ||
+username|String	     |是	 |用户名称   ||
+password|String	     |是	 |密码	    ||
 
 ####返回参数：
 字段名  |字段类型   |说明
@@ -390,16 +392,17 @@ msg    |String    |返回结果描述(失败时才有)
 特别说明：成功登录后，调用方必须保存返回的token，并将该token作为参数，在其他所有接口中表现。Token有效期为12小时，同一用户重复登录将使之前的token失效。
 
 #11. 渠道确认风控结果
-#####url:/api/risk/riskResultConfirm?token=xxxxxxxxxxxxxx
-#####请求方式：get
+
+url:/api/risk/riskResultConfirm?token=xxxxxxxxxxxxxx
+请求方式：get
 
 ####请求参数：
-字段名   |字段类型    |是否必填    |说明  |完整样例
+字段名   |字段类型    |是否必填    |说明       |完整样例
 
-orderNo  |String     |是      |订单编号   | { "orderNo": "11111",}
+orderNo  |String     |是         |订单编号   | { "orderNo": "11111",}
 
 ####返回参数：
-字段名  |字段类型    |说明
+字段名   |字段类型   |说明
 :- | :-: | :-
 code    |String    |状态：（0:成功、500：失败）
 msg     |String    |返回结果描述(失败时才有)
@@ -411,6 +414,7 @@ msg     |String    |返回结果描述(失败时才有)
 }
 
 #12.字典表字段
+
 ####证件类型：
 身份证 :1 
 护照 :2 
