@@ -114,16 +114,16 @@ C    |sid       |tSring   |是   |证件号码
 C    |telephone |String   |是   |电话
 C    |xiaohai   |String   |是   |有未成人数（年龄小于18岁）（必须提供）
 houseModels房屋信息(H)|address       |String   |见图  |房产地址
-H|areaRemark    |String   |见图  |面积备注（可传空）
-H|city          |String   |见图  |房产所在城市
-H|diYa          |String   |见图  |是否有民间抵押
-H|district      |String   |见图  |房产地区
-H|doneTime      |String   |见图  |竣工年限
-H|estatesNo     |String   |见图  |产证编号
-H|floorNo       |Integer  |见图  |所在楼层（缺省0）
-H|floorSum      |Integer  |见图  |总楼层（缺省0）
-H|houseArea     |Double   |见图  |房产面积
-H|houseNature   |String   |见图  |房产性质(多层公寓、高层公寓、花园住宅、其它、工业厂房、商铺、办公楼)
+H    |areaRemark    |String   |见图  |面积备注（可传空）
+H    |city          |String   |见图  |房产所在城市
+H    |diYa          |String   |见图  |是否有民间抵押
+H    |district      |String   |见图  |房产地区
+H    |doneTime      |String   |见图  |竣工年限
+H    |estatesNo     |String   |见图  |产证编号
+H    |floorNo       |Integer  |见图  |所在楼层（缺省0）
+H    |floorSum      |Integer  |见图  |总楼层（缺省0）
+H    |houseArea     |Double   |见图  |房产面积
+H    |houseNature   |String   |见图  |房产性质(多层公寓、高层公寓、花园住宅、其它、工业厂房、商铺、办公楼)
 H|isFuGai       |Integer  |见图  |民间是否为最高额抵押(0：否、1：是)
 H|isSeeHouse    |Integer  |见图  |能否看房(0：否、1：是，2：未知)
 H|isZuiGaoEDiYa |Integer  |见图  |银行是否为最高额抵押(0：否、1：是)
@@ -138,39 +138,39 @@ H|province      |String   |见图  |房产所在省
 H|qiTa          |String   |见图  |此前借款用途
 H|regionName    |String   |见图  |小区名称(必须提供)
 H|remark        |String   |见图  |备注
-||shuXing       |Integer  |是    |房屋属性(1抵押房、2备用房)
-||urlId         |String   |见图  |附件的GUID，逗号分隔
-||useTime       |String   |见图  |使用年限（缺省0）
-||yinHang       |String   |见图  |抵押银行名称
-||yinHangBalance|String   |见图  |银行抵押余额
-||yinHangDaiKuan|String   |见图  |银行贷款性质(按揭、持证抵押)
-||yinHangDiYa   |String   |见图  |是否有银行抵押
-||yinHangRiQi   |String   |见图  |银行到期日
-||DqbHouseDiya  |houseDiyaList | |抵押信息(houseDiya对象)
-||yinHangXingZhi|String   |见图  |银行性质(中资、外资)
+H|shuXing       |Integer  |是    |房屋属性(1抵押房、2备用房)
+H|urlId         |String   |见图  |附件的GUID，逗号分隔
+H|useTime       |String   |见图  |使用年限（缺省0）
+H|yinHang       |String   |见图  |抵押银行名称
+H|yinHangBalance|String   |见图  |银行抵押余额
+H|yinHangDaiKuan|String   |见图  |银行贷款性质(按揭、持证抵押)
+H|yinHangDiYa   |String   |见图  |是否有银行抵押
+H|yinHangRiQi   |String   |见图  |银行到期日
+H|DqbHouseDiya  |houseDiyaList | |抵押信息(houseDiya对象)
+H|yinHangXingZhi|String   |见图   |银行性质(中资、外资)
 deptModel资方信息|deptId          |Long     |是    ||
 deptModel资方信息|userId          |Long     |是    ||
-loanInfoModel 借款信息|borrowingBalance  |Integer |是   |借款金额（万元）
-||borrowingLife       |Integer |是   |借款期限（月）
-||borrowingUsage      |Integer |是   |借款用途
-||capitalName         |String  |是   |资金方名称
-||monthRate           |String  |是   |月利率
-||borrowingLaoren     |String  |是   |老人数
-||borrowingXiaohai    |String  |是   |小孩数
-||payment             |String  |是   |还款来源
-||orderNo             |String  |是   |订单编号
-||orderState          |String  |是   |订单状态
-houseDiya抵押信息      |fk_house_id       |Integer |是   |关联订单dqb_house表主键
-同上||dycs              |String   |是   |抵押次数
-同上||dyqr              |String   |是   |抵押权人
-同上||dyje              |double   |是   |抵押全额
-同上||dyye              |double   |是   |抵押余额
-同上||zgedy             |String   |是   |最高额抵押
-同上||dyxz              |String   |是   |抵押性质
-同上||dkxz              |String   |是   |贷款性质
-同上||kssj              |Time    |是   |开始时间
-同上||jssj              |Time    |是   |结束时间
-||ziLiaoGuid        |String  |是   |资包id
+loanInfoModel 借款信息(L)|borrowingBalance  |Integer |是   |借款金额（万元）
+L|borrowingLife       |Integer  |是   |借款期限（月）
+L|borrowingUsage      |Integer  |是   |借款用途
+L|capitalName         |String   |是   |资金方名称
+L|monthRate           |String   |是   |月利率
+L|borrowingLaoren     |String   |是   |老人数
+L|borrowingXiaohai    |String   |是   |小孩数
+L|payment             |String   |是   |还款来源
+||orderNo             |String   |是   |订单编号
+||orderState          |String   |是   |订单状态
+houseDiya抵押信息(HO)  |fk_house_id       |Integer |是   |关联订单dqb_house表主键
+HO|dycs               |String   |是   |抵押次数
+HO|dyqr               |String   |是   |抵押权人
+HO|dyje               |double   |是   |抵押全额
+HO|dyye               |double   |是   |抵押余额
+HO|zgedy              |String   |是   |最高额抵押
+HO|dyxz               |String   |是   |抵押性质
+HO|dkxz               |String   |是   |贷款性质
+HO|kssj               |Time     |是   |开始时间
+HO|jssj               |Time     |是   |结束时间
+||ziLiaoGuid          |String   |是   |资包id
 
 #####特别说明：
 (1)
