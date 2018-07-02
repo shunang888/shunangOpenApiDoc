@@ -10,7 +10,7 @@ Url：/api/outChannel/houseCommit?#####token=xxxxxxxxxxxxxx
 
 ####请求参数：
 字段名 |字段类型   | 说明 | 是否必填
-:- | :-: | :- | :-
+:- | :-: | :- |
 regionName |String | 小区名(必须提供)     |是
 address    |String | 地址                |是
 houseNature|String | 房屋性质            |是
