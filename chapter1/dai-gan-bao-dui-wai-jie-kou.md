@@ -26,7 +26,7 @@ remark     |String | 备注（可传空）      |否
 urlId      |String | 附件的GUID，逗号分隔（单独文档说明）                                  |是
 assessPrice|Double | 自估价             |是
 
-#####完整样例
+######完整样例
 {"assessHouseModels": [{
 "address": "瞿溪路1234号",
 "areaRemark": "面积备注",
@@ -77,7 +77,7 @@ code      |String  |状态
 msg       |String  |返回信息
 orderState|String  |订单状态。取固定值：house_confirm
 
-#####完整样例
+######完整样例
 {
 "code": 0,
 “msg”:”...”,
@@ -104,73 +104,73 @@ url：/api/outChannel/intoPieces?token=xxxxxxxxxxxxxx
 companyInfoModels 借款/权利企业信息    |businessNumber  |String    |是   |营业执照编号
 companyInfoModels 借款/权利企业信息    |companyName     |String    |是   |企业名
 companyInfoModels 借款/权利企业信息    |companyType     |Integer   |是   |企业类型类型 1 借款企业2权利企业（即房屋所有人）
-custInfoModels 借款/权利人信息    |custType        |Integer |是   |客户类型 1 借款人2 权利人（即房屋所有人）
-custInfoModels 借款/权利人信息    |hunyinStatus    |Integer |是   |婚姻状态(1:未婚、2：已婚、3：离异、4：丧偶、5：两次以上婚史)
-custInfoModels 借款/权利人信息    |idType    |Integer  |是   |证件类型
-custInfoModels 借款/权利人信息    |job       |String   |是   |职业
-custInfoModels 借款/权利人信息    |laoren    |Integer  |是   |有老人数（必须提供）
-custInfoModels 借款/权利人信息    |name      |String   |是   |客户名称
-custInfoModels 借款/权利人信息    |sid       |tSring   |是   |证件号码
-custInfoModels 借款/权利人信息    |telephone |String   |是   |电话
-custInfoModels 借款/权利人信息    |xiaohai   |String   |是   |有未成人数（年龄小于18岁）（必须提供）
-houseModels房屋信息|address       |String   |见图  |房产地址
-houseModels房屋信息|areaRemark    |String   |见图  |面积备注（可传空）
-houseModels房屋信息|city          |String   |见图  |房产所在城市
-houseModels房屋信息|diYa          |String   |见图  |是否有民间抵押
-houseModels房屋信息|district      |String   |见图  |房产地区
-houseModels房屋信息|doneTime      |String    |见图  |竣工年限
-houseModels房屋信息|estatesNo     |String   |见图  |产证编号
-houseModels房屋信息|floorNo       |Integer  |见图  |所在楼层（缺省0）
-houseModels房屋信息|floorSum      |Integer  |见图  |总楼层（缺省0）
-houseModels房屋信息|houseArea     |Double   |见图  |房产面积
-houseModels房屋信息|houseNature   |String   |见图  |房产性质(多层公寓、高层公寓、花园住宅、其它、工业厂房、商铺、办公楼)
-houseModels房屋信息|isFuGai       |Integer  |见图  |民间是否为最高额抵押(0：否、1：是)
-houseModels房屋信息|isSeeHouse    |Integer  |见图  |能否看房(0：否、1：是，2：未知)
-houseModels房屋信息|isZuiGaoEDiYa |Integer  |见图  |银行是否为最高额抵押(0：否、1：是)
-houseModels房屋信息|juZhu         |String   |见图  |居住情况(自住、租赁有备案、租赁无备案、空置、拆迁安置)
-houseModels房屋信息|laoRen        |Integer  |见图  |有无老年人和未成年 (0：否、1：是)
-houseModels房屋信息|minJian       |String   |见图  |民间抵押余额（缺省0）
-houseModels房屋信息|minJianDaoQiRi|String   |见图  |民间到期日
-houseModels房屋信息|minJianZiFang |String   |见图  |民间出资方
-houseModels房屋信息|owner1        |String   |见图  |房产权利人
-houseModels房屋信息|personNo      |Integer  |见图  |户口人数（必须提供）
-houseModels房屋信息|province      |String   |见图  |房产所在省
-houseModels房屋信息|qiTa          |String   |见图  |此前借款用途
-houseModels房屋信息|regionName    |String   |见图  |小区名称(必须提供)
-houseModels房屋信息|remark        |String   |见图  |备注
-houseModels房屋信息|shuXing       |Integer  |是    |房屋属性(1抵押房、2备用房)
-houseModels房屋信息|urlId         |String   |见图  |附件的GUID，逗号分隔
-houseModels房屋信息|useTime       |String   |见图  |使用年限（缺省0）
-houseModels房屋信息|yinHang       |String   |见图  |抵押银行名称
-houseModels房屋信息|yinHangBalance|String   |见图  |银行抵押余额
-houseModels房屋信息|yinHangDaiKuan|String   |见图  |银行贷款性质(按揭、持证抵押)
-houseModels房屋信息|yinHangDiYa   |String   |见图  |是否有银行抵押
-houseModels房屋信息|yinHangRiQi   |String   |见图  |银行到期日
-houseModels房屋信息|DqbHouseDiya  |houseDiyaList | |抵押信息(houseDiya对象)
-houseModels房屋信息|yinHangXingZhi|String   |见图  |银行性质(中资、外资)
+custInfoModels 借款/权利人信息(C)    |custType        |Integer |是   |客户类型 1 借款人2 权利人（即房屋所有人）
+C    |hunyinStatus    |Integer |是   |婚姻状态(1:未婚、2：已婚、3：离异、4：丧偶、5：两次以上婚史)
+C    |idType    |Integer  |是   |证件类型
+C    |job       |String   |是   |职业
+C    |laoren    |Integer  |是   |有老人数（必须提供）
+C    |name      |String   |是   |客户名称
+C    |sid       |tSring   |是   |证件号码
+C    |telephone |String   |是   |电话
+C    |xiaohai   |String   |是   |有未成人数（年龄小于18岁）（必须提供）
+houseModels房屋信息(H)|address       |String   |见图  |房产地址
+H|areaRemark    |String   |见图  |面积备注（可传空）
+H|city          |String   |见图  |房产所在城市
+H|diYa          |String   |见图  |是否有民间抵押
+H|district      |String   |见图  |房产地区
+H|doneTime      |String   |见图  |竣工年限
+H|estatesNo     |String   |见图  |产证编号
+H|floorNo       |Integer  |见图  |所在楼层（缺省0）
+H|floorSum      |Integer  |见图  |总楼层（缺省0）
+H|houseArea     |Double   |见图  |房产面积
+H|houseNature   |String   |见图  |房产性质(多层公寓、高层公寓、花园住宅、其它、工业厂房、商铺、办公楼)
+H|isFuGai       |Integer  |见图  |民间是否为最高额抵押(0：否、1：是)
+H|isSeeHouse    |Integer  |见图  |能否看房(0：否、1：是，2：未知)
+H|isZuiGaoEDiYa |Integer  |见图  |银行是否为最高额抵押(0：否、1：是)
+H|juZhu         |String   |见图  |居住情况(自住、租赁有备案、租赁无备案、空置、拆迁安置)
+H|laoRen        |Integer  |见图  |有无老年人和未成年 (0：否、1：是)
+H|minJian       |String   |见图  |民间抵押余额（缺省0）
+H|minJianDaoQiRi|String   |见图  |民间到期日
+H|minJianZiFang |String   |见图  |民间出资方
+H|owner1        |String   |见图  |房产权利人
+H|personNo      |Integer  |见图  |户口人数（必须提供）
+H|province      |String   |见图  |房产所在省
+H|qiTa          |String   |见图  |此前借款用途
+H|regionName    |String   |见图  |小区名称(必须提供)
+H|remark        |String   |见图  |备注
+||shuXing       |Integer  |是    |房屋属性(1抵押房、2备用房)
+||urlId         |String   |见图  |附件的GUID，逗号分隔
+||useTime       |String   |见图  |使用年限（缺省0）
+||yinHang       |String   |见图  |抵押银行名称
+||yinHangBalance|String   |见图  |银行抵押余额
+||yinHangDaiKuan|String   |见图  |银行贷款性质(按揭、持证抵押)
+||yinHangDiYa   |String   |见图  |是否有银行抵押
+||yinHangRiQi   |String   |见图  |银行到期日
+||DqbHouseDiya  |houseDiyaList | |抵押信息(houseDiya对象)
+||yinHangXingZhi|String   |见图  |银行性质(中资、外资)
 deptModel资方信息|deptId          |Long     |是    ||
 deptModel资方信息|userId          |Long     |是    ||
-|borrowingBalance  |Integer |是   |借款金额（万元）
-|borrowingLife     |Integer |是   |借款期限（月）
-|borrowingUsage    |Integer |是   |借款用途
-|capitalName       |String  |是   |资金方名称
-|monthRate         |String  |是   |月利率
-|borrowingLaoren   |String  |是   |老人数
-|borrowingXiaohai  |String  |是   |小孩数
-|payment           |String  |是   |还款来源
-|orderNo           |String  |是   |订单编号
-|orderState        |String  |是   |订单状态
-|fk_house_id       |Integer |是   |关联订单dqb_house表主键
-|dycs              |String   |是   |抵押次数
-|dyqr              |String   |是   |抵押权人
-|dyje              |double  |是   |抵押全额
-|dyye              |double  |是   |抵押余额
-|zgedy             |String   |是   |最高额抵押
-|dyxz              |String   |是   |抵押性质
-|dkxz              |String   |是   |贷款性质
-|kssj              |Time    |是   |开始时间
-|jssj              |Time    |是   |结束时间
-|ziLiaoGuid        |String  |是   |资包id
+loanInfoModel 借款信息|borrowingBalance  |Integer |是   |借款金额（万元）
+||borrowingLife       |Integer |是   |借款期限（月）
+||borrowingUsage      |Integer |是   |借款用途
+||capitalName         |String  |是   |资金方名称
+||monthRate           |String  |是   |月利率
+||borrowingLaoren     |String  |是   |老人数
+||borrowingXiaohai    |String  |是   |小孩数
+||payment             |String  |是   |还款来源
+||orderNo             |String  |是   |订单编号
+||orderState          |String  |是   |订单状态
+houseDiya抵押信息      |fk_house_id       |Integer |是   |关联订单dqb_house表主键
+同上||dycs              |String   |是   |抵押次数
+同上||dyqr              |String   |是   |抵押权人
+同上||dyje              |double   |是   |抵押全额
+同上||dyye              |double   |是   |抵押余额
+同上||zgedy             |String   |是   |最高额抵押
+同上||dyxz              |String   |是   |抵押性质
+同上||dkxz              |String   |是   |贷款性质
+同上||kssj              |Time    |是   |开始时间
+同上||jssj              |Time    |是   |结束时间
+||ziLiaoGuid        |String  |是   |资包id
 
 #####特别说明：
 (1)
@@ -203,7 +203,7 @@ riskmanage_evaluation 风控中 可以补充材料
 code  |String      |状态  ||
 msg   |String      |返回信息 ||   
 
-#####完整样例
+######完整样例
 {
 "msg": "token不能为空",
 "code": 500
@@ -224,7 +224,7 @@ Url：/api/outChannel/priceReconsider?token=xxxxxxxxxxxxxx
 |attachmentId |String   |是   |附件的GUID，逗号分隔（单独文档说明）    |5fd614fc-141a-4003-927a-205de047246e,b2873343-9278-4228-91c6-4485c273c4d4
 |orderState   |String   |是   |订单状态    |house_fuyi
 
-#####完整样例
+######完整样例
 {
 “orderState”:house_fuyi,
 "fuYiModels": [{
@@ -243,7 +243,7 @@ Url：/api/outChannel/priceReconsider?token=xxxxxxxxxxxxxx
 |code	|String	  |状态	   ||
 |msg	|String	  |返回信息 ||	
 
-#####完整样例
+######完整样例
 { 
  "msg": "",
 "code": 200
@@ -259,7 +259,7 @@ Url： /api/outChannel/queRenJiaGe?token=xxxxxxxxxxxxxx
 :- | :-: | :-
 |orderNo   |String	|是	        |订单编号	|A20171215180558785
 
-#####完整样例
+######完整样例
 {
 orderModel:{
 orderNo:”A20171215180”
@@ -272,7 +272,7 @@ orderNo:”A20171215180”
 code    |String   |状态  ||
 msg     |String   |返回信息   || 
 
-#####完整样例
+######完整样例
 {  "msg": "",
 "code": 200
 }
@@ -287,7 +287,7 @@ Url：/api/outChannel/orderGiveUp?token=xxxxxxxxxxxxxx
 :- | :-: | :-
 orderNo |String      |是          |订单编号    |A20171215180558785
 
-#####完整样例
+######完整样例
 {
 orderModel:{
 orderNo:”A20171215180”
@@ -300,7 +300,7 @@ orderNo:”A20171215180”
 code	|String	        |状态	   ||
 msg	|String	        |返回信息  ||	
 
-#####完整样例
+######完整样例
 { 
  "msg": "",
 "code": 200
@@ -327,7 +327,7 @@ riskBalance |String    |出保金额（万元）
 yearRate    |String    |年利率
 riskMessage |String    |最终风控意见
 
-#####完整样例
+######完整样例
 { 
 "msg": "",
 "code": 500
@@ -358,7 +358,7 @@ urlId   |String  |是       |附件的GUID，逗号分隔（单独文档说明�
 code	|String	    |状态       ||
 msg	|String	    |返回信息   ||
 
-#####完整样例	
+######完整样例	
 { 
  "msg": "",
 "code": 200
@@ -382,7 +382,7 @@ code   |String    |状态：（0:成功、500：失败）
 token  |String    |返回token信息(用作调用其它接口的关键值)
 msg    |String    |返回结果描述(失败时才有)
 
-#####完整样例
+######完整样例
 { 
 "msg": "",
 "code": 0,
@@ -407,7 +407,7 @@ orderNo  |String     |是         |订单编号   | { "orderNo": "11111",}
 code    |String    |状态：（0:成功、500：失败）
 msg     |String    |返回结果描述(失败时才有)
 
-#####完整样例
+######完整样例
 { 
 "msg": "",
 "code": 0,
