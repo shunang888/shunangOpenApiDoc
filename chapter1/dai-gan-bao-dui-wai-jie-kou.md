@@ -150,26 +150,26 @@ H|DqbHouseDiya  |houseDiyaList | |抵押信息(houseDiya对象)
 H|yinHangXingZhi|String   |见图  |银行性质(中资、外资)
 deptModel资方信息|deptId          |Long     |是    ||
 deptModel资方信息|userId          |Long     |是    ||
-loanInfoModel 借款信息|borrowingBalance  |Integer |是   |借款金额（万元）
-||borrowingLife       |Integer |是   |借款期限（月）
-||borrowingUsage      |Integer |是   |借款用途
-||capitalName         |String  |是   |资金方名称
-||monthRate           |String  |是   |月利率
-||borrowingLaoren     |String  |是   |老人数
-||borrowingXiaohai    |String  |是   |小孩数
-||payment             |String  |是   |还款来源
-||orderNo             |String  |是   |订单编号
-||orderState          |String  |是   |订单状态
-houseDiya抵押信息      |fk_house_id       |Integer |是   |关联订单dqb_house表主键
-同上||dycs              |String   |是   |抵押次数
-同上||dyqr              |String   |是   |抵押权人
-同上||dyje              |double   |是   |抵押全额
-同上||dyye              |double   |是   |抵押余额
-同上||zgedy             |String   |是   |最高额抵押
-同上||dyxz              |String   |是   |抵押性质
-同上||dkxz              |String   |是   |贷款性质
-同上||kssj              |Time    |是   |开始时间
-同上||jssj              |Time    |是   |结束时间
+loanInfoModel 借款信息(L)|borrowingBalance  |Integer |是   |借款金额（万元）
+L|borrowingLife       |Integer |是   |借款期限（月）
+L|borrowingUsage      |Integer |是   |借款用途
+L|capitalName         |String  |是   |资金方名称
+L|monthRate           |String  |是   |月利率
+L|borrowingLaoren     |String  |是   |老人数
+L|borrowingXiaohai    |String  |是   |小孩数
+L|payment             |String  |是   |还款来源
+L|orderNo             |String  |是   |订单编号
+L|orderState          |String  |是   |订单状态
+houseDiya抵押信息(HO)      |fk_house_id       |Integer |是   |关联订单dqb_house表主键
+HO|dycs              |String   |是   |抵押次数
+HO|dyqr              |String   |是   |抵押权人
+HO|dyje              |double   |是   |抵押全额
+HO|dyye              |double   |是   |抵押余额
+HO|zgedy             |String   |是   |最高额抵押
+HO|dyxz              |String   |是   |抵押性质
+HO|dkxz              |String   |是   |贷款性质
+HO|kssj              |Time    |是   |开始时间
+HO|jssj              |Time    |是   |结束时间
 ||ziLiaoGuid        |String  |是   |资包id
 
 #####特别说明：
