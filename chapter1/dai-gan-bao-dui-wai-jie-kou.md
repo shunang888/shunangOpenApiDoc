@@ -161,13 +161,13 @@ deptModel资方信息|userId          |Long     |是    ||
 |orderNo           |String  |是   |订单编号
 |orderState        |String  |是   |订单状态
 |fk_house_id       |Integer |是   |关联订单dqb_house表主键
-|dycs              |Sring   |是   |抵押次数
-|dyqr              |Sring   |是   |抵押权人
+|dycs              |String   |是   |抵押次数
+|dyqr              |String   |是   |抵押权人
 |dyje              |double  |是   |抵押全额
 |dyye              |double  |是   |抵押余额
-|zgedy             |Sring   |是   |最高额抵押
-|dyxz              |Sring   |是   |抵押性质
-|dkxz              |Sring   |是   |贷款性质
+|zgedy             |String   |是   |最高额抵押
+|dyxz              |String   |是   |抵押性质
+|dkxz              |String   |是   |贷款性质
 |kssj              |Time    |是   |开始时间
 |jssj              |Time    |是   |结束时间
 |ziLiaoGuid        |String  |是   |资包id
@@ -255,9 +255,9 @@ Url： /api/outChannel/queRenJiaGe?token=xxxxxxxxxxxxxx
 请求方式：post
 
 ####请求参数：
-|字段名	|字段类型	|是否必填	|说明	|样例
+|字段名	   |字段类型	|是否必填	|说明	        |样例
 :- | :-: | :-
-|orderNo	|String	|是	|订单编号	|A20171215180558785
+|orderNo   |String	|是	        |订单编号	|A20171215180558785
 
 #####完整样例
 {
@@ -278,13 +278,14 @@ msg     |String   |返回信息   ||
 }
 
 #6.弃单
-#####Url：/api/outChannel/orderGiveUp?token=xxxxxxxxxxxxxx
-#####请求方式：post
+
+Url：/api/outChannel/orderGiveUp?token=xxxxxxxxxxxxxx
+请求方式：post
 
 ####请求参数：
-字段名   |字段类型    |是否必填    |说明 |样例
+字段名   |字段类型     |是否必填    |说明        |样例
 :- | :-: | :-
-orderNo |String      |是   |订单编号    |A20171215180558785
+orderNo |String      |是          |订单编号    |A20171215180558785
 
 #####完整样例
 {
@@ -294,35 +295,37 @@ orderNo:”A20171215180”
 }
 
 ####返回参数：
-字段名	|字段类型	|说明	|样例
+字段名	|字段类型	|说明	   |样例
 :- | :-: | :-
-code	|String	|状态	||
-msg	|String	|返回信息||	
+code	|String	        |状态	   ||
+msg	|String	        |返回信息  ||	
 
 #####完整样例
-{  "msg": "",
+{ 
+ "msg": "",
 "code": 200
 }
 
 #7.获取保理结果
-#####Url： /api/outChannel/getGuaranteeResult?token=xxxxxxxxxxxxxx
-#####请求方式：get
+
+Url： /api/outChannel/getGuaranteeResult?token=xxxxxxxxxxxxxx
+请求方式：get
 
 ####请求参数：
-字段名	|字段类型	|是否必填	|说明	|样例	|完整样例
+字段名	|字段类型   |是否必填	|说明	 |样例	               |完整样例
 :- | :-: | :-
-orderNo	|String	|是	|订单编号	|A20171215180558785	||
+orderNo	|String	   |是	       |订单编号 |A20171215180558785	||
 
 ####返回参数：
 
-字段名 |字段类型       |说明
+字段名       |字段类型   |说明
 :- | :-: | :-
-code    |String       |状态
-msg     |String       |返回信息
-riskResule  |String   |风控结果
-riskBalance  |String  |出保金额（万元）
-yearRate   |String    |年利率
-riskMessage  |String  |最终风控意见
+code        |String    |状态
+msg         |String    |返回信息
+riskResule  |String    |风控结果
+riskBalance |String    |出保金额（万元）
+yearRate    |String    |年利率
+riskMessage |String    |最终风控意见
 
 #####完整样例
 { 
@@ -338,21 +341,22 @@ riskMessage  |String  |最终风控意见
 }
 
 #8.补充资料
-#####Url：/api/outChannel/buChong?token=xxxxxxxxxxxxxx
-#####请求方式：post
+
+Url：/api/outChannel/buChong?token=xxxxxxxxxxxxxx
+请求方式：post
 
 ####请求参数：
-字段名   |字段类型    |是否必填    |说明  样例
+字段名   |字段类型 |是否必填 |说明        |样例
 :- | :-: | :-
-orderNo |String  |是   |订单编号    |A20171215180558785
-beizhu  |String  |是   |备注  
-urlId   |String  |是   |附件的GUID，逗号分隔（单独文档说明）    |5fd614fc-141a-4003-927a-205de047246e,b2873343-9278-4228-91c6-4485c273c4d4
+orderNo |String  |是       |订单编号    |A20171215180558785
+beizhu  |String  |是       |备注  
+urlId   |String  |是       |附件的GUID，逗号分隔（单独文档说明）    |5fd614fc-141a-4003-927a-205de047246e,b2873343-9278-4228-91c6-4485c273c4d4
 
 ####返回参数：
-字段名	|字段类型	|说明	|样例
+字段名	|字段类型   |说明       |样例
 :- | :-: | :-
-code	|String	|状态	||
-msg	|String	|返回信息||
+code	|String	    |状态       ||
+msg	|String	    |返回信息   ||
 
 #####完整样例	
 {  "msg": "",
