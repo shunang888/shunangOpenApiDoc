@@ -158,8 +158,8 @@ L|monthRate           |String  |是   |月利率
 L|borrowingLaoren     |String  |是   |老人数
 L|borrowingXiaohai    |String  |是   |小孩数
 L|payment             |String  |是   |还款来源
-L|orderNo             |String  |是   |订单编号
-L|orderState          |String  |是   |订单状态
+||orderNo             |String  |是   |订单编号
+||orderState          |String  |是   |订单状态
 houseDiya抵押信息(HO)      |fk_house_id       |Integer |是   |关联订单dqb_house表主键
 HO|dycs              |String   |是   |抵押次数
 HO|dyqr              |String   |是   |抵押权人
